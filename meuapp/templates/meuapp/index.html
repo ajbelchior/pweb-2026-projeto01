@@ -1,0 +1,36 @@
+{% extends 'meuapp/base.html' %}
+{% load static %}
+
+{% block conteudo %}
+
+<main class="home">
+
+    <section class="texto">
+
+        <h1>{{ titulo1 }}</h1>
+
+        <h2>{{ titulo2 }}</h2>
+
+        <p>
+            {{ descricao }}
+        </p>
+
+        <a
+            href="https://www.youtube.com/@turmadamonica"
+            target="_blank"
+            class="botao">
+            Conheça a Turma
+        </a>
+
+    </section>
+
+    <section class="imagem">
+
+        <img src="{% static 'imagens/FundoInicio.png' %}"
+             alt="Turma da Mônica">
+
+    </section>
+
+</main>
+
+{% endblock %}

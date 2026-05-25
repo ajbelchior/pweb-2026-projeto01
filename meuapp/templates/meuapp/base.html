@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Turma da Mônica</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <nav>
+
+        <img src="{% static 'imagens/Logo.png' %}" alt="Logo Turma da Mônica">
+
+        <div class="menu">
+            <a href="/">Início</a>
+            <a href="/elenco/">Elenco</a>
+            <a href="/sobre/">Sobre</a>
+        </div>
+
+    </nav>
+
+    {% block conteudo %}
+    {% endblock %}
+
+    <footer>
+        © 2026 Turma da Mônica | Desenvolvido por AJCB
+    </footer>
+
+</body>
+</html>

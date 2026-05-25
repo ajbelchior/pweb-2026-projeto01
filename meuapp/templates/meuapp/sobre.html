@@ -1,0 +1,36 @@
+{% extends 'meuapp/base.html' %}
+
+{% block conteudo %}
+
+<main class="pagina-sobre">
+
+    <h1>Sobre o Site</h1>
+
+    <div class="caixa-texto">
+
+        <p>
+            O site Turma da Mônica foi desenvolvido como atividade da disciplina
+            de Desenvolvimento Web, utilizando {{ tecnologias }}.
+        </p>
+
+        <p>
+            O objetivo deste projeto é apresentar informações sobre os personagens
+            principais da Turma da Mônica, uma das séries de quadrinhos mais
+            conhecidas do Brasil, criada por Maurício de Sousa.
+        </p>
+
+        <p>
+            O site possui três páginas principais: Início, Elenco e Sobre,
+            contendo informações gerais sobre a série, seus personagens e
+            detalhes sobre o desenvolvimento do projeto.
+        </p>
+
+        <p class="autor">
+            Autor: {{ autor }}
+        </p>
+
+    </div>
+
+</main>
+
+{% endblock %}
