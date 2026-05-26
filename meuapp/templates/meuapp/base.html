@@ -2,29 +2,40 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Turma da Mônica</title>
+    <title>
+        {% block title %}
+        Turma da Mônica
+        {% endblock %}
+    </title>
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body>
 
     <nav>
 
-        <img src="{% static 'imagens/Logo.png' %}" alt="Logo Turma da Mônica">
+        <img src="{% static 'imagens/Logo.png' %}"
+             alt="Logo Turma da Mônica">
 
         <div class="menu">
-            <a href="/">Início</a>
-            <a href="/elenco/">Elenco</a>
-            <a href="/sobre/">Sobre</a>
+
+            <a href="{% url 'index' %}">Início</a>
+
+            <a href="{% url 'elenco' %}">Elenco</a>
+
+            <a href="{% url 'sobre' %}">Sobre</a>
+
         </div>
 
     </nav>
 
-    {% block conteudo %}
+    {% block content %}
     {% endblock %}
 
     <footer>
@@ -32,4 +43,5 @@
     </footer>
 
 </body>
+
 </html>

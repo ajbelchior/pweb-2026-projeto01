@@ -1,18 +1,25 @@
 {% extends 'meuapp/base.html' %}
 {% load static %}
 
-{% block conteudo %}
+{% block title %}
+Início
+{% endblock %}
+
+{% block content %}
 
 <main class="home">
 
     <section class="texto">
 
-        <h1>{{ titulo1 }}</h1>
+        <h1>BEM VINDO AO</h1>
 
-        <h2>{{ titulo2 }}</h2>
+        <h2>MUNDO DA DIVERSÃO!</h2>
 
         <p>
-            {{ descricao }}
+            A Turma da Mônica é uma das séries de quadrinhos mais famosas do Brasil,
+            criada por Maurício de Sousa em 1959.
+            As histórias acompanham as aventuras de Mônica, Cebolinha,
+            Cascão, Magali e seus amigos no Bairro do Limoeiro.
         </p>
 
         <a
@@ -26,8 +33,9 @@
 
     <section class="imagem">
 
-        <img src="{% static 'imagens/FundoInicio.png' %}"
-             alt="Turma da Mônica">
+        <img
+            src="{% static 'imagens/FundoInicio.png' %}"
+            alt="Turma da Mônica">
 
     </section>
 

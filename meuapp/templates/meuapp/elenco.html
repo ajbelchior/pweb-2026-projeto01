@@ -1,7 +1,11 @@
 {% extends 'meuapp/base.html' %}
 {% load static %}
 
-{% block conteudo %}
+{% block title %}
+Elenco
+{% endblock %}
+
+{% block content %}
 
 <main class="pagina-elenco">
 
@@ -11,38 +15,20 @@
 
     <div class="linha1">
 
-        {% for personagem in personagens|slice:':6' %}
+        {% for personagem in personagens %}
 
         <div class="card">
-            <img src="{% static personagem.foto %}" alt="{{ personagem.nome }}">
+
+            <img
+                src="{% static personagem.imagem %}"
+                alt="{{ personagem.nome }}">
 
             <h3>{{ personagem.nome }}</h3>
 
-            <p>Idade: {{ personagem.idade }} anos</p>
-
-            <p>Posição: {{ personagem.posicao }}</p>
+            <p>Idade: {{ personagem.idade }}</p>
 
             <p>Origem: {{ personagem.origem }}</p>
-        </div>
 
-        {% endfor %}
-
-    </div>
-
-    <div class="linha2">
-
-        {% for personagem in personagens|slice:'6:' %}
-
-        <div class="card">
-            <img src="{% static personagem.foto %}" alt="{{ personagem.nome }}">
-
-            <h3>{{ personagem.nome }}</h3>
-
-            <p>Idade: {{ personagem.idade }} anos</p>
-
-            <p>Posição: {{ personagem.posicao }}</p>
-
-            <p>Origem: {{ personagem.origem }}</p>
         </div>
 
         {% endfor %}
