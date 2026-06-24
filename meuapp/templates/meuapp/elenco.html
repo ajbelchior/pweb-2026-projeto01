@@ -19,9 +19,9 @@ Elenco
         <div class="card">
 
             <img
-                src="{% static personagem.imagem %}"
+                src="{{ personagem.imagem.url }}"
                 alt="{{ personagem.nome }}">
-
+                
             <h3>{{ personagem.nome }}</h3>
 
             <p>Idade: {{ personagem.idade }}</p>
